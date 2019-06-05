@@ -1,0 +1,6 @@
+nth-server-12\SQLEXPRESS
+Windows Authentication
+Database=nth
+Table=line1 or dbo.line1
+columns=(time,fault,duration,product)
+types=(bigint,int,int,int)

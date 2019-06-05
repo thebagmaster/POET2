@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/lato/css/lato.css"/>
+    <script src = "bower_components/d3/d3.js"></script>
+    <script src = "bower_components/jquery/dist/jquery.js"></script>
+    <script src = "bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src = "bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src = "js/helpers.js"></script>
+    <script src = "js/index.js"></script>
+    <script src = "js/menu.js"></script>
+    <script src = "js/bar.js"></script>
+    <script src = "js/parts.js"></script>
+    <script src = "js/stats.js"></script>
+    <script src = "js/avail.js"></script>
+    <script src = "js/yield.js"></script>
+    <script src = "js/eff.js"></script>
+    <script src = "js/titles.js"></script>
+    <script src = "js/shifts.js"></script>
+    <script src = "js/tree.js"></script>
+    <title>Data Test</title>
+</head>
+<body>
+  <div class="all">
+    <div class="container">
+      <div class="row">
+        <div class="title"></div>
+        <div class='prog'></div>
+        <div class="settingsbutton menubuttonui"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="menu">
+            <div class="tree"></div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="row timebarrow">
+           <svg class="timebar viewWindow"></svg>
+          </div>
+          <div class="row">
+            <svg class="loading"></svg>
+            <svg class="chart viewWindow"></svg>
+            <svg class="oeestats viewWindow"></svg>
+            <svg class="avail viewWindow"></svg>
+            <svg class="yield viewWindow"></svg>
+            <!-- <svg class="eff viewWindow"></svg> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+var build             = 'build';
+var development       = 'build/dev';
+var production        = 'build/production';
+var developmentAssets = '';
+
+module.exports = {
+ browsersync: {
+  development: {
+   server: {
+     baseDir: [development, build]
+   },
+   port: 3000,
+   files: [
+    developmentAssets + '/css/*.css',
+    developmentAssets + '/js/*.js',
+    developmentAssets + '/images/**',
+    developmentAssets + '/fonts/*'
+   ]
+  }
+ }
+};	

@@ -1,0 +1,45 @@
+db.PLC1.find({$and:[{'event':{$gte:6000}},{'event':{$ne:6002}}]})
+
+db.PLC1.find({'event':6002}).count()
+
+db.users.aggregate( [ {$match:{event:6002}} ] )
+
+db.PLC1.find({'event':6002}).sort({_id:1}).limit(700).forEach( function(d) { db.PLC1.update({_id:d._id},{'event':Math.random()}); } );
+
+db.PLC1.find({'event':{$lt:1000}})
+
+db.PLC1.find({'event':{$lt:1000}}).forEach( function(d) { db.PLC1.update({_id:d._id},{'event':6000+Math.floor(Math.random()*10)}); } );
+
+db.L1_PLC1_DICT.insert({'id':1,dict:{
+1000:'stop0',
+1001:'stop1',
+1002:'stop2',
+1003:'stop3',
+1004:'stop4',
+1005:'stop5',
+1006:'stop6',
+1007:'stop7',
+1008:'stop8',
+1009:'stop9',
+1999:'wait',
+
+6000:'fail0',
+6001:'fail1',
+6002:'fail2',
+6003:'fail3',
+6004:'fail4',
+6005:'fail5',
+6006:'fail6',
+6007:'fail7',
+6008:'fail8',
+6009:'fail9',
+6010:'failt'
+}});
+
+
+cd /home/nth/oee/backend/
+python driver.py &
+cd /home/nth/oee/frontend/
+sudo bash serve.sh &
+
+db.L1_PLC1.drop();db.L1_PLC1_D.drop();db.L1_PLC1_H.drop();db.L1_PLC1_M.drop();

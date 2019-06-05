@@ -1,0 +1,2 @@
+db.PLC1.find({time: {$exists: true}}).forEach(function(obj) { obj.time = new NumberInt(obj.time);db.PLC1.save(obj);});
+db.PLC1.find({event: {$exists: true}}).forEach(function(obj) { obj.event = new NumberInt(obj.event);db.PLC1.save(obj);});
